@@ -24,6 +24,7 @@ public class Programa {
         System.out.println(t1);
         System.out.println(t2);
         System.out.println(t3);
+        System.out.println(ordenadoA.buscaSequencial(ordenadoA.getArray1(), 101));
     }
 
 }

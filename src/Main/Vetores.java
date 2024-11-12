@@ -57,6 +57,15 @@ public class Vetores {
         return (getNanoSecs() - inicio) / 1000;
     }
 
+    public int buscaSequencial(int[] array, int num) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == num) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     private long getNanoSecs() {
         return System.nanoTime();
     }
