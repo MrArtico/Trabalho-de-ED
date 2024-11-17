@@ -17,8 +17,6 @@ public class Programa {
         ordenadoA.preencherOrdenado();
         inversoA.preencherInverso();
         aleatorioA.preencherAleatorio();
-
-        System.out.println(ordenadoA.buscaBinaria(ordenadoA.getArray1(), 99));
     }
 
 }
