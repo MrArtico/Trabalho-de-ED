@@ -37,7 +37,7 @@ public class Vetores {
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
-        return (getNanoSecs() - inicio) / 1000;
+        return getNanoSecs() - inicio;
 
     }
 
@@ -46,7 +46,7 @@ public class Vetores {
         for (int i = 0; i < array.length; i++) {
             array[i] = array.length - i;
         }
-        return (getNanoSecs() - inicio) / 1000;
+        return getNanoSecs() - inicio;
     }
 
     private long preencherAleatorio(int[] array) {
@@ -54,15 +54,36 @@ public class Vetores {
         for (int i = 0; i < array.length; i++) {
             array[i] = Randomico.getRandom();
         }
-        return (getNanoSecs() - inicio) / 1000;
+        return getNanoSecs() - inicio;
     }
 
-    public int buscaSequencial(int[] array, int num) {
+    public int buscaSequencial(int[] array, int numero) {
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == num) {
-                return i;
+            if (array[i] == numero) {
+                return array[i];
             }
         }
+        return -1;
+    }
+
+    public int buscaBinaria(int[] array, int numero) {
+        int inicio = 0;
+        int fim = array.length;
+
+        while (inicio <= fim) {
+            int meio = inicio + (fim - inicio) / 2;
+
+            if (array[meio] == numero) {
+                return meio;
+            }
+            else if (array[meio] < numero) {
+                inicio = meio + 1;
+            }
+            else {
+                fim = meio - 1;
+            }
+        }
+
         return -1;
     }
 

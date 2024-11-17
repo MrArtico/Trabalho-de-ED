@@ -17,14 +17,8 @@ public class Programa {
         ordenadoA.preencherOrdenado();
         inversoA.preencherInverso();
         aleatorioA.preencherAleatorio();
-        long t1 = ordenadoA.getTempoDe100();
-        long t2 = ordenadoA.getTempoDe1000();
-        long t3 = ordenadoA.getTempoDe10000();
 
-        System.out.println(t1);
-        System.out.println(t2);
-        System.out.println(t3);
-        System.out.println(ordenadoA.buscaSequencial(ordenadoA.getArray1(), 101));
+        System.out.println(ordenadoA.buscaBinaria(ordenadoA.getArray1(), 99));
     }
 
 }
