@@ -9,7 +9,7 @@ public class Randomico {
     }
 
     public static int getRandom() {
-        return random.nextInt();
+        return random.nextInt((int) (Math.random() * 10000) + 1);
     }
 }
 
