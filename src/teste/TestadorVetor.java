@@ -6,7 +6,7 @@ import util.Cronometro;
 
 import java.util.Random;
 
-public class Testador {
+public class TestadorVetor {
     public static void main(String[] args) {
         int[] tamanhos = {100, 1000, 10000};
 
@@ -49,7 +49,6 @@ public class Testador {
     private static void testarVetor(int[] dados, int tamanho, String ordem) {
         Vetor vetor = new Vetor(tamanho);
     
-        // Inserção
         double tempoInsercao = calcularMedia(() -> {
             for (int valor : dados) {
                 vetor.inserir(valor);
@@ -57,7 +56,6 @@ public class Testador {
         });
         System.out.println(String.format("Tempo médio de inserção no vetor (%s): %.2f ms", ordem, tempoInsercao));
     
-        // Ordenação
         double tempoBubbleSort = calcularMedia(() -> {
             int[] copia = vetor.getDados();
             Ordenacao.bubbleSort(copia);
@@ -70,7 +68,6 @@ public class Testador {
         });
         System.out.println(String.format("Tempo médio de QuickSort: %.2f ms", tempoQuickSort));
     
-        // Busca Sequencial
         int primeiroElemento = dados[0];
         int ultimoElemento = dados[dados.length - 1];
         int elementoMeio = dados[dados.length / 2];
@@ -84,7 +81,6 @@ public class Testador {
         });
         System.out.println(String.format("Tempo médio de busca sequencial: %.2f ms", tempoBuscaSequencial));
     
-        // Busca Binária
         double tempoBuscaBinaria = calcularMedia(() -> {
             int[] dadosOrdenados = vetor.getDados();
             Ordenacao.quickSort(dadosOrdenados, 0, dadosOrdenados.length - 1);
