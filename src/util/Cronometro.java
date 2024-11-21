@@ -13,6 +13,6 @@ public class Cronometro {
     }
 
     public double getDuracaoMilissegundos() {
-        return (fim - inicio) / 1_000_000.0;
+        return (fim - inicio) / 1000000.0;
     }
 }

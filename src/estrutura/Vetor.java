@@ -25,9 +25,6 @@ public class Vetor {
     }
 
     public int buscaBinaria(int valor) {
-        if (!estaOrdenado()) {
-            ordenar();
-        }
         int inicio = 0, fim = tamanhoAtual - 1;
         while (inicio <= fim) {
             int meio = (inicio + fim) / 2;
@@ -40,27 +37,6 @@ public class Vetor {
             }
         }
         return -1;
-    }
-
-    private boolean estaOrdenado() {
-        for (int i = 1; i < tamanhoAtual; i++) {
-            if (dados[i - 1] > dados[i]) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private void ordenar() {
-        for (int i = 0; i < tamanhoAtual - 1; i++) {
-            for (int j = 0; j < tamanhoAtual - 1 - i; j++) {
-                if (dados[j] > dados[j + 1]) {
-                    int temp = dados[j];
-                    dados[j] = dados[j + 1];
-                    dados[j + 1] = temp;
-                }
-            }
-        }
     }
 
     public int[] getDados() {
