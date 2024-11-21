@@ -16,17 +16,25 @@ public class TestadorArvoreBinaria {
                 arvore.inserir(valor);
             }
         });
-
-        System.out.println(String.format("Tempo médio de inserção na árvore binária (%s): %.2f ms", ordem, tempoInsercao));
+        System.out.println(String.format("\n\nTempo médio de inserção na árvore binária (%s): %f ms", ordem, tempoInsercao));
 
         double tempoBusca = calcularMedia(() -> {
             arvore.buscar(dados[0]);
+        });
+        System.out.println(String.format("Tempo médio de busca na árvore binária (Primeiro Elemento) (%s): %f ms", ordem, tempoBusca));
+        double tempoBusca2 = calcularMedia(() -> {
             arvore.buscar(dados[dados.length - 1]);
+        });
+        System.out.println(String.format("Tempo médio de busca na árvore binária (Ultimo Elemento) (%s): %f ms", ordem, tempoBusca2));
+        double tempoBusca3 = calcularMedia(() -> {
             arvore.buscar(dados[dados.length / 2]);
+        });
+        System.out.println(String.format("Tempo médio de busca na árvore binária (Elemento do Meio) (%s): %f ms", ordem, tempoBusca3));
+        double tempoBusca4 = calcularMedia(() -> {
             arvore.buscar(-1);
         });
+        System.out.println(String.format("Tempo médio de busca na árvore binária (Elemento Inexistente) (%s): %f ms\n\n", ordem, tempoBusca4));
 
-        System.out.println(String.format("Tempo médio de busca na árvore binária (%s): %.2f ms", ordem, tempoBusca));
     }
 
     private static double calcularMedia(Runnable teste) {

@@ -34,9 +34,7 @@ public class ArvoreBinaria {
         if (valor == atual.valor) {
             return true;
         }
-        return valor < atual.valor 
-            ? buscar(atual.esquerda, valor) 
-            : buscar(atual.direita, valor);
+        return valor < atual.valor ? buscar(atual.esquerda, valor) : buscar(atual.direita, valor);
     }
 
     private static class No {
