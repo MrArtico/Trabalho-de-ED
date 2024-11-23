@@ -93,7 +93,11 @@ public class TestadorVetor {
             vetor.buscaSequencial(valorInexistente);
         });
         System.out.println(String.format("(Valor Inexistente): tempo médio de busca sequencial: %f ms\n\n", tempoBuscaSequencial4));
-        
+        double tempoBuscaSequencialAleatoria = calcularMedia(() -> {
+            vetor.buscaSequencial(aleatorio1);
+        });
+        System.out.println(String.format("(Elemento Aleatorio): tempo médio de busca sequencial: %f ms\n\n", tempoBuscaSequencialAleatoria));
+
         int[] dadosOrdenados = vetor.getDados();
         Ordenacao.quickSort(dadosOrdenados, 0, dadosOrdenados.length - 1);
 
@@ -114,10 +118,10 @@ public class TestadorVetor {
         });
         System.out.println(String.format("(Valor Inexistente): tempo médio de busca binária: %f ms", tempoBuscaBinaria4));
         
-        double tempoBuscaSequencialAleatoria = calcularMedia(() -> {
+        double tempoBuscaBinariaAleatoria = calcularMedia(() -> {
             vetor.buscaSequencial(aleatorio1);
         });
-        System.out.println(String.format("(Elemento Aleatorio): tempo médio de busca binária: %f ms\n\n", tempoBuscaSequencialAleatoria));
+        System.out.println(String.format("(Elemento Aleatorio): tempo médio de busca binária: %f ms\n\n", tempoBuscaBinariaAleatoria));
     }
 
     private static double calcularMedia(Runnable teste) {
