@@ -43,7 +43,7 @@ public class TestadorArvoreAVL {
             arvore.buscar(dados[0]);
             arvore.buscar(dados[dados.length - 1]);
             arvore.buscar(dados[dados.length / 2]);
-            arvore.buscar(-1);  // Valor inexistente
+            arvore.buscar(-1);
         });
 
         System.out.println(String.format("Tempo médio de busca na árvore AVL (%s): %.2f ms", ordem, tempoBusca));
