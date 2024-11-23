@@ -65,7 +65,7 @@ O projeto inclui classes de testes para medir o tempo de execução das operaç�
   - Executa o teste várias vezes e calcula a média do tempo de execução.
 
 - **`gerarDados(int tamanho, String ordem)`**:
-  - Gera dados em uma ordem específica ("ordenado", "invertido", "aleatorio").
+  - Gera dados em uma ordem específica ("ordenado", "invertido", "aleatorio"). E nos tamanhos 100, 1000, 10000.
 
 #### `TestadorArvoreBinaria`
 
@@ -88,10 +88,10 @@ O projeto inclui classes de testes para medir o tempo de execução das operaç�
 
 - **`calcularMedia(Runnable teste)`**:
   - Calcula o tempo médio de execução de uma operação.
-  - Executa o teste várias vezes e calcula a média do tempo de execução.
+  - Executa o teste 5 vezes e calcula a média do tempo de execução.
 
 - **`gerarDados(int tamanho, String ordem)`**:
-  - Gera dados em uma ordem específica ("ordenado", "reverso", "aleatorio").
+  - Gera dados em uma ordem específica ("ordenado", "reverso", "aleatorio") e nos tamanhos definidos.
 
 ## Cronômetro
 
