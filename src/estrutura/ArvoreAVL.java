@@ -30,7 +30,7 @@ public class ArvoreAVL {
         } else if (valor > raiz.valor) {
             raiz.direito = inserir(raiz.direito, valor);
         } else {
-            return raiz; // Não permite elementos duplicados
+            return raiz;
         }
 
         raiz.altura = 1 + Math.max(obterAltura(raiz.esquerdo), obterAltura(raiz.direito));

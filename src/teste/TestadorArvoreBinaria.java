@@ -38,7 +38,7 @@ public class TestadorArvoreBinaria {
         double tempoBusca5 = calcularMedia(() -> {
             arvore.buscar(dados[random.nextInt(dados.length)]);
         });
-        System.out.println(String.format("Tempo médio de busca na árvore binária (Elemento Aleatorio) (%s): %f ms\n\n", ordem, tempoBusca5));
+        System.out.println(String.format("Tempo médio de busca na árvore binária (Busca Elemento Aleatoria) (%s): %f ms\n\n", ordem, tempoBusca5));
 
     }
 
