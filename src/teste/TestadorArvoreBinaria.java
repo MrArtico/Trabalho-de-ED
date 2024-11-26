@@ -8,6 +8,7 @@ public class TestadorArvoreBinaria {
 
     public static void testarArvoreBinaria(int[] dados, String ordem) {
         ArvoreBinaria arvore = new ArvoreBinaria();
+        Random random = new Random();
 
         System.out.println("Iniciando os testes para " + ordem);
         
@@ -34,6 +35,10 @@ public class TestadorArvoreBinaria {
             arvore.buscar(-1);
         });
         System.out.println(String.format("Tempo médio de busca na árvore binária (Elemento Inexistente) (%s): %f ms\n\n", ordem, tempoBusca4));
+        double tempoBusca5 = calcularMedia(() -> {
+            arvore.buscar(dados[random.nextInt(dados.length)]);
+        });
+        System.out.println(String.format("Tempo médio de busca na árvore binária (Elemento Aleatorio) (%s): %f ms\n\n", ordem, tempoBusca5));
 
     }
 

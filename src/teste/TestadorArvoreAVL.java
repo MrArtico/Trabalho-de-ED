@@ -28,7 +28,8 @@ public class TestadorArvoreAVL {
 
     public static void testarArvoreAVL(int[] dados, String ordem) {
         ArvoreAVL arvore = new ArvoreAVL();
-
+        Random random = new Random();
+        
         System.out.println("Iniciando os testes para " + ordem);
         
         double tempoInsercao = calcularMedia(() -> {
@@ -55,6 +56,10 @@ public class TestadorArvoreAVL {
             arvore.buscar(-1);
         });
         System.out.println(String.format("Tempo médio de busca na árvore AVL (Elemento Inexistente) (%s): %f ms\n\n", ordem, tempoBusca4));
+        double tempoBusca5 = calcularMedia(() -> {
+            arvore.buscar(dados[random.nextInt(dados.length)]);
+        });
+        System.out.println(String.format("Tempo médio de busca na árvore AVL (Elemento Aleatorio) (%s): %f ms\n\n", ordem, tempoBusca5));
 
     }
 
