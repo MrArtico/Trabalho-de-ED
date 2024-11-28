@@ -109,4 +109,4 @@ Versão do Java: `21.0.4 (LTS).`
 Data de lançamento: `16 de julho de 2024.`
 Distribuição: `Eclipse Temurin (um dos builds mais usados e confiáveis de OpenJDK).`
 Ambiente de execução:
-- **`OpenJDK Runtime Environment com build 21.0.4+7-LTS.`
+- *`OpenJDK Runtime Environment com build 21.0.4+7-LTS.`
