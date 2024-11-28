@@ -105,3 +105,8 @@ A classe **`Cronometro`** é utilizada para medir o tempo de execução de opera
 ## Como Executar
 
 Para executar os testes, basta rodar as classes de teste (`TestadorArvoreAVL`, `TestadorArvoreBinaria`, `TestadorVetor`) a partir do método `main` dentro deles.
+Versão do Java: `21.0.4 (LTS).`
+Data de lançamento: `16 de julho de 2024.`
+Distribuição: `Eclipse Temurin (um dos builds mais usados e confiáveis de OpenJDK).`
+Ambiente de execução:
+- **`OpenJDK Runtime Environment com build 21.0.4+7-LTS.`
